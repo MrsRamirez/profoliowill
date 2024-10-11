@@ -1,24 +1,41 @@
-font-family: Arial, sans-serif;
+   body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #e0f7fa;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .banner {
-            background-color: #4A90E2;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: white;
             text-align: center;
             padding: 40px 20px;
+            animation: slideIn 1s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .banner img {
             width: 100px;
             height: auto;
             margin: 20px 0;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
             margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .container {
@@ -32,32 +49,38 @@ font-family: Arial, sans-serif;
             height: 600px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
         }
 
         .menu {
-            background-color: #333;
+            background-color: #4A90E2;
             overflow: hidden;
             text-align: center;
         }
 
         .menu a {
-            float: none;
             display: inline-block;
             color: white;
             padding: 14px 20px;
             text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            margin: 5px;
         }
 
         .menu a:hover {
-            background-color: #575757;
+            background-color: #357ABD;
+            transform: scale(1.05);
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #4A90E2;
+            background-color: #ff7e5f;
             color: white;
             position: relative;
             bottom: 0;
